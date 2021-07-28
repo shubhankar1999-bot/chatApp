@@ -63,6 +63,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             ElevatedButton(onPressed: (){
+              if(_myController.text.isNotEmpty)
               Navigator.pushNamed(context, "/chat",arguments: {"user":_myController.text});
               }, child: Icon(Icons.send),)
           ],
